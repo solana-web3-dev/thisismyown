@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎄 CHRISTMAS BACKGROUND */
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: white;
+  font-family: Inter, system-ui, sans-serif;
+
+  /* Christmas gradient */
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 40%),
+    linear-gradient(
+      180deg,
+      #7a0c0c 0%,      /* deep christmas red */
+      #0f3d2e 45%,     /* christmas green */
+      #0b1a2a 100%     /* winter night blue */
+    );
+  background-attachment: fixed;
+}
+/* ✨ Christmas Light Glow */
+.christmas-glow::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,0,0,0.15), transparent 25%),
+    radial-gradient(circle at 80% 15%, rgba(0,255,156,0.15), transparent 25%),
+    radial-gradient(circle at 50% 30%, rgba(255,215,0,0.12), transparent 30%);
+}
+
+
+/* ❄️ Snow Animation */
+.snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.snow span {
+  position: absolute;
+  top: -10px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: snowFall linear infinite;
+}
+
+@keyframes snowFall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+/* 🎅 Santa Flying */
+.santa {
+  position: fixed;
+  top: 15%;
+  left: -300px;
+  width: 220px;
+  pointer-events: none;
+  z-index: 60;
+  animation: santaFly 25s linear infinite;
+}
+
+@keyframes santaFly {
+  0% {
+    transform: translateX(-300px) translateY(0);
+  }
+  50% {
+    transform: translateX(110vw) translateY(-40px);
+  }
+  100% {
+    transform: translateX(110vw) translateY(0);
+  }
+}
+
+/* 🎁 Gift Drop */
+.gift {
+  position: fixed;
+  top: 25%;
+  font-size: 32px;
+  z-index: 55;
+  animation: giftFall 2.5s ease-in forwards;
+}
+
+@keyframes giftFall {
+  to {
+    transform: translateY(80vh) rotate(360deg);
+  }
+}
+
+/* 💥 Explosion */
+.explosion {
+  position: fixed;
+  top: 80vh;
+  font-size: 42px;
+  z-index: 60;
+  animation: boom 0.6s ease-out forwards;
+}
+
+@keyframes boom {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* ⚡ Glitch Effect */
+.glitch {
+  animation: glitchFlash 0.3s infinite;
+}
+
+@keyframes glitchFlash {
+  0% {
+    text-shadow: 2px 2px #ff2e2e;
+  }
+  50% {
+    text-shadow: -2px -2px #00ff9c;
+  }
+  100% {
+    text-shadow: 2px 2px #ff2e2e;
+  }
+}
+.santa {
+  position: fixed;
+  top: 15%;
+  left: -300px;
+  width: 220px;
+  z-index: 60;
+  pointer-events: none;
+  animation-name: santaFly;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/* 🌟 Golden Gift Glow */
+.golden {
+  text-shadow: 0 0 10px gold, 0 0 20px gold;
+}
+/* 🌟 Golden Gift Visual */
+.golden-gift {
+  font-size: 34px;
+  animation: goldenPulse 1.2s infinite alternate;
+  text-shadow:
+    0 0 8px gold,
+    0 0 16px gold,
+    0 0 32px #ffd700;
+}
+
+@keyframes goldenPulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+
+/* 🌌 Night Sky Stars */
+.stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1.5px 1.5px at 80% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 70%, white, transparent),
+    radial-gradient(1.5px 1.5px at 10% 80%, white, transparent),
+    radial-gradient(2px 2px at 70% 20%, white, transparent);
+  background-size: 300px 300px;
+  opacity: 0.35;
+}
+
+/* 🎁 Christmas Pattern Texture */
+.christmas-pattern {
+  position: fixed;
+  inset: 0;
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("../public/photo_6222258098726964107_y.jpg")
+    /* repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 8px
+    ); */
+}
+
+/* 🔔 Christmas Lights */
+.lights {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 80;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 12px;
+}
+
+.lights span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+.lights span:nth-child(4n) {
+  background: #ff2e2e;
+}
+.lights span:nth-child(4n+1) {
+  background: #00ff9c;
+}
+.lights span:nth-child(4n+2) {
+  background: #ffd700;
+}
+.lights span:nth-child(4n+3) {
+  background: #4cc9ff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* 🎄 Pine Trees Silhouette */
+.pines {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 70;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.8), transparent),
+    repeating-linear-gradient(
+      -60deg,
+      #06281a 0px,
+      #06281a 20px,
+      transparent 20px,
+      transparent 40px
+    );
+  opacity: 0.8;
+}
