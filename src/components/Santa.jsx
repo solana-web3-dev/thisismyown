@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import GiftDrop from "./GiftDrop";
-import GiftPopup from "./GiftPopup";
 import generateCode from "../utils/enerateCode";
 
 
