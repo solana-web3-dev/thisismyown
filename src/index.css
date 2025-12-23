@@ -190,7 +190,7 @@ body {
   opacity: 0.6;
   z-index: -1;
   pointer-events: none;
-  background-image: url("../public/photo_6222258098726964107_y.jpg")
+  background-image: url("/photo_6222258098726964107_y.jpg")
     /* repeating-linear-gradient(
       45deg,
       rgba(255,255,255,0.02),
