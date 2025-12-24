@@ -15,7 +15,7 @@ export default function InfoPopup({ open, onClose }) {
         </div>
 
         <a
-          href="https://twitter.com/YOUR_TWITTER"
+          href="https://x.com/GoldenSantaCoin"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-5 px-5 py-2 bg-[#1d9bf0] rounded-lg font-bold"
