@@ -31,7 +31,7 @@ export default function GiftPopup({ message, golden, code, onClose }) {
             </p>
 
             <a
-              href="https://twitter.com/YOUR_TWITTER/status/YOUR_POST_ID"
+              href="https://x.com/GoldenSantaCoin"
               target="_blank"
               rel="noreferrer"
               className="inline-block mb-4 px-4 py-2 bg-[#1d9bf0] rounded-lg font-bold"
