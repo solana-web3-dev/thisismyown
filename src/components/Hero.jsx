@@ -18,19 +18,17 @@ playJingle()
         </h1>
 
         <p className="mt-6 text-lg text-gray-200 max-w-xl ">
-          Collect Golden Gifts and claim rewards on Twitter.
+         Message Santa to Collect Golden Gifts and claim rewards on Twitter.
         </p>
-        <p className="mt-6 text-lg text-gray-200 max-w-xl">
-          CA: 0x1234567890abcdef1234567890abcdef12345678
-        </p>
+      
 
         <div className="flex gap-4 mt-8">
           <button
             onMouseEnter={playJingle}
             className="px-8 py-4 bg-neonRed rounded-xl font-bold hover:scale-110 transition"
           >
-            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-  BUY NOW
+            <a href="https://x.com/GoldenSantaCoin" target="_blank" rel="noopener noreferrer">
+  X (Twitter)
 </a>
           
           </button>
